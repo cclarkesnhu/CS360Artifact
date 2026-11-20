@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission for notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InventoryApplication">
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Register Activity -->
+        <activity android:name=".RegisterActivity"
+        android:exported="false" />
+        <!-- Main Menu -->
+        <activity
+            android:name=".MainMenuActivity"
+            android:exported="false" />
+
+        <!-- Inventory -->
+        <activity
+            android:name=".InventoryActivity"
+            android:exported="false" />
+
+        <!-- Goods Movement -->
+        <activity
+            android:name=".GoodsMovementActivity"
+            android:exported="false" />
+    </application>
+
+
+
+
+</manifest>
